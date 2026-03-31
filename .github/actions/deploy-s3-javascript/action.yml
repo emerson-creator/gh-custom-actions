@@ -1,5 +1,17 @@
 name: "Deploy to S3 (JavaScript)"
 description: "Deploy a website to S3 (via JavaScript)"
+inputs:
+  bucket:
+    description: "The S3 bucket to deploy to"
+    required: true
+  bucket-region:
+    description: "The region the S3 bucket is in"
+    required: false
+    default: "us-east-1"
+  dist-folder:
+    description: "The folder containing the files to deploy"
+    required: false
+    default: "dist"
 runs:
   using: "node20"
   main: "index.js"

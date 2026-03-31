@@ -1,5 +1,5 @@
 name: "Deploy to S3 (JavaScript)"
 description: "Deploy a website to S3 (via JavaScript)"
 runs:
-  using: "node16"
+  using: "node20"
   main: "index.js"

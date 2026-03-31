@@ -14,7 +14,8 @@ function run() {
     `aws s3 sync ${distFolder} s3://${bucketName} --region ${bucketRegion} --delete`,
   );
 
-  core.info("Deploying to S3 (JavaScript)...");
+  const websiteUrl = `http://${bucketName}.s3-website-${bucketRegion}.amazonaws.com/`;
+  core.setOutput("website-url", websiteUrl);
 }
 
 run();

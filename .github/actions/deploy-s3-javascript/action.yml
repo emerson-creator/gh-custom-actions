@@ -15,3 +15,6 @@ inputs:
 runs:
   using: "node20"
   main: "index.js"
+outputs:
+  website-url:
+    description: "The URL of the deployed website"

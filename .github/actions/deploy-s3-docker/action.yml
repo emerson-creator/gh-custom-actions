@@ -1,0 +1,19 @@
+name: "Deploy to S3 Docker"
+description: "Deploy a Docker image to an S3 bucket"
+inputs:
+  bucket:
+    description: "The S3 bucket to deploy to"
+    required: true
+  bucket-region:
+    description: "The region the S3 bucket is in"
+    required: false
+    default: "us-east-1"
+  dist-folder:
+    description: "The folder containing the files to deploy"
+    required: false
+outputs:
+  website-url:
+    description: "The URL of the deployed website"
+runs:
+  using: "docker"
+  image: "Dockerfile"
